@@ -11,24 +11,8 @@
 <title>Title</title>
 </head>
 <body>
-<h1> Things To Do: </h1>
+<h1> Add Item </h1>
 
- 
-<table>
- {% for items in item %}
-    <tr>
-    {% if items.done %}
-        <td><strike>{{ items.name }}</strike></td>
-    {% else %}
-        <td>{{ items.name }}</td>
-    {% endif %}
-    </tr>
-{% empty %}
-<td>You have nothing to add</td>
-    
- {% endfor %}
- </table>
-  <a href="/add"> add</a>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
