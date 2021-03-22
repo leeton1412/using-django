@@ -13,15 +13,18 @@
 <body>
 <h1> Things To Do: </h1>
 
- {{ item }}
+ 
 <table>
  {% for items in item %}
-    
     <tr>
+    {% if items.done %}
+        <td><strike>{{ items.name }}</strike></td>
+    {% else %}
         <td>{{ items.name }}</td>
-        <td>{{ items.done }}</td>
+    {% endif %}
     </tr>
-    
+{% empty %}
+<td>You have nothing to add</td>
     
  {% endfor %}
  </table>
