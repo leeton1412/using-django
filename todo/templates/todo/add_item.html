@@ -12,6 +12,20 @@
 </head>
 <body>
 <h1> Add Item </h1>
+<form method="POST" action="add">
+    {% csrf_token %}
+    <div>
+        <label for="id_name">Name:</label>
+        <p><input type="text" name="id_name" id="item_name"></p>
+    </div>
+    <div>
+        <label for="id_done">done:</label>
+        <p><input type="checkbox" name="id_done" id="done"></p>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
