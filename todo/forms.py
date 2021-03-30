@@ -3,6 +3,6 @@ from .models import Item
 
 
 class ItemForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = Item
         fields = ['name', 'done']
